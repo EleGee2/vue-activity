@@ -59,7 +59,6 @@
           name="progress"
           min="0"
           max="100"
-          value="90"
           step="10"
         >
         <label for="progress">{{ activityToUpdate.progress }} %</label>

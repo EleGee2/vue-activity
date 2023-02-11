@@ -1,4 +1,5 @@
-import fakeApi from '@/lib/fakeApi'
+// import fakeApi from '@/lib/fakeApi'
+import fakeApi from '../lib/fakeApi'
 import Vue from 'vue'
 
 const store = {
@@ -12,16 +13,18 @@ const store = {
   fetchActivities () {
     return fakeApi.get('activities', {force: 1}).then(activities => {
 
-      Object.keys(activities).forEach(key => 
+      Object.keys(activities).forEach(key => {
         Vue.set(this.state.activities, key, activities[key])
+
         // this.setItem(activities, key, activities[key])
-      )
+      })
       return activities
     })
   },
 
   fetchCategories () {
     return fakeApi.get("categories", {force: 1}).then(categories => {
+
       Object.keys(categories).forEach(key => {
         Vue.set(this.state.categories, key, categories[key])
 

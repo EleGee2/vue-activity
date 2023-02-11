@@ -94,7 +94,7 @@ export default {
         condition = (value) => value > 0 && value < 100
       }
       else if (this.filter === "finished") {
-        condition = (value) => value = 100
+        condition = (value) => value === 100
       } 
       else {
         condition = (value) => value === 0
@@ -133,7 +133,7 @@ export default {
     }
   },
   created() {
-    // fakeApi.fillDB()
+    fakeApi.fillDB()
 
     this.isFetching = true
     store.fetchActivities().then(activities => {

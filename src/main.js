@@ -18,6 +18,8 @@ Vue.filter("prettyTime", function(timeStamp) {
   }
 })
 
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+
